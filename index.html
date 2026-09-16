@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>AutoDrive | Avto Salon</title>
+
+    <link rel="stylesheet" href="stayle.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            AUTO<span>DRIVE</span>
+        </div>
+
+        <nav>
+            <a href="#home">Bosh sahifa</a>
+            <a href="#cars">Avtomobillar</a>
+            <a href="#about">Biz haqimizda</a>
+            <a href="#contact">Aloqa</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <p class="small-title">PREMIUM AVTO SALON</p>
+
+            <h1>
+                Orzuingizdagi<br>
+                <span>avtomobilni</span> toping
+            </h1>
+
+            <p class="hero-text">
+                Eng zamonaviy va sifatli avtomobillarni
+                bizning avtosalonimizdan toping.
+            </p>
+
+            <a href="#cars" class="btn">
+                Avtomobillarni ko‘rish →
+            </a>
+        </div>
+
+    </section>
+
+    <section class="stats">
+
+        <div>
+            <h2>100+</h2>
+            <p>Avtomobil</p>
+        </div>
+
+        <div>
+            <h2>5+</h2>
+            <p>Yillik tajriba</p>
+        </div>
+
+        <div>
+            <h2>500+</h2>
+            <p>Mamnun mijozlar</p>
+        </div>
+
+        <div>
+            <h2>24/7</h2>
+            <p>Xizmat</p>
+        </div>
+
+    </section>
+
+    <section class="cars" id="cars">
+
+        <div class="section-head">
+            <p>AVTOMOBILLAR</p>
+            <h2>Mashhur modellar</h2>
+        </div>
+
+        <div class="filters">
+
+            <button onclick="filterCars('all')">
+                Barchasi
+            </button>
+
+            <button onclick="filterCars('bmw')">
+                BMW
+            </button>
+
+            <button onclick="filterCars('mercedes')">
+                Mercedes
+            </button>
+
+            <button onclick="filterCars('chevrolet')">
+                Chevrolet
+            </button>
+
+            <button onclick="filterCars('byd')">
+                BYD
+            </button>
+
+        </div>
+
+        <div class="car-container">
+
+            <div class="car-card" data-brand="bmw">
+
+                <div class="car-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1000&q=80"
+                        alt="BMW M5">
+
+                    <span class="tag">
+                        TOP
+                    </span>
+                </div>
+
+                <div class="car-info">
+
+                    <p class="brand">BMW</p>
+
+                    <h3>BMW M5</h3>
+
+                    <p class="spec">
+                        4.4L V8 • Benzin • Avtomat
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <div>
+                            <small>Narxi</small>
+                            <strong>$120,000</strong>
+                        </div>
+
+                        <button onclick="showCar(
+                            'BMW M5',
+                            '4.4L V8 Twin-Turbo',
+                            '727 ot kuchi',
+                            '305 km/soat',
+                            '3.5 soniya',
+                            'Benzin',
+                            'Avtomat',
+                            '$120,000'
+                        )">
+                            Batafsil
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="car-card" data-brand="mercedes">
+
+                <div class="car-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1000&q=80"
+                        alt="Mercedes-Benz">
+
+                    <span class="tag">
+                        NEW
+                    </span>
+                </div>
+
+                <div class="car-info">
+
+                    <p class="brand">MERCEDES</p>
+
+                    <h3>Mercedes-AMG GT</h3>
+
+                    <p class="spec">
+                        4.0L V8 • Benzin • Avtomat
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <div>
+                            <small>Narxi</small>
+                            <strong>$105,000</strong>
+                        </div>
+
+                        <button onclick="showCar(
+                            'Mercedes-AMG GT',
+                            '4.0L V8 Biturbo',
+                            '577 ot kuchi',
+                            '315 km/soat',
+                            '3.2 soniya',
+                            'Benzin',
+                            'Avtomat',
+                            '$105,000'
+                        )">
+                            Batafsil
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="car-card" data-brand="chevrolet">
+
+                <div class="car-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=80"
+                        alt="Chevrolet Malibu">
+
+                </div>
+
+                <div class="car-info">
+
+                    <p class="brand">CHEVROLET</p>
+
+                    <h3>Chevrolet Malibu</h3>
+
+                    <p class="spec">
+                        2.0L Turbo • Benzin • Avtomat
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <div>
+                            <small>Narxi</small>
+                            <strong>$32,000</strong>
+                        </div>
+
+                        <button onclick="showCar(
+                            'Chevrolet Malibu',
+                            '2.0L Turbo',
+                            '236 ot kuchi',
+                            '250 km/soat',
+                            '6.8 soniya',
+                            'Benzin',
+                            'Avtomat',
+                            '$32,000'
+                        )">
+                            Batafsil
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="car-card" data-brand="bmw">
+
+                <div class="car-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1000&q=80"
+                        alt="BMW M8">
+
+                </div>
+
+                <div class="car-info">
+
+                    <p class="brand">BMW</p>
+
+                    <h3>BMW M8</h3>
+
+                    <p class="spec">
+                        4.4L V8 • Benzin • Avtomat
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <div>
+                            <small>Narxi</small>
+                            <strong>$145,000</strong>
+                        </div>
+
+                        <button onclick="showCar(
+                            'BMW M8',
+                            '4.4L V8 Twin-Turbo',
+                            '617 ot kuchi',
+                            '305 km/soat',
+                            '3.2 soniya',
+                            'Benzin',
+                            'Avtomat',
+                            '$145,000'
+                        )">
+                            Batafsil
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="car-card" data-brand="byd">
+
+                <div class="car-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=80"
+                        alt="BYD">
+
+                </div>
+
+                <div class="car-info">
+
+                    <p class="brand">BYD</p>
+
+                    <h3>BYD Song Plus</h3>
+
+                    <p class="spec">
+                        Hybrid • Avtomat • SUV
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <div>
+                            <small>Narxi</small>
+                            <strong>$28,000</strong>
+                        </div>
+
+                        <button onclick="showCar(
+                            'BYD Song Plus',
+                            '1.5L Hybrid',
+                            '197 ot kuchi',
+                            '180 km/soat',
+                            '8.5 soniya',
+                            'Gibrid',
+                            'Avtomat',
+                            '$28,000'
+                        )">
+                            Batafsil
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="car-card" data-brand="porsche">
+
+                <div class="car-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80"
+                        alt="Porsche 911">
+
+                    <span class="tag">
+                        SPORT
+                    </span>
+
+                </div>
+
+                <div class="car-info">
+
+                    <p class="brand">PORSCHE</p>
+
+                    <h3>Porsche 911</h3>
+
+                    <p class="spec">
+                        3.0L Turbo • Benzin • Avtomat
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <div>
+                            <small>Narxi</small>
+                            <strong>$135,000</strong>
+                        </div>
+
+                        <button onclick="showCar(
+                            'Porsche 911',
+                            '3.0L Twin-Turbo',
+                            '443 ot kuchi',
+                            '293 km/soat',
+                            '3.5 soniya',
+                            'Benzin',
+                            'Avtomat',
+                            '$135,000'
+                        )">
+                            Batafsil
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="modal" id="carModal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeCar()">
+                ×
+            </button>
+
+            <p class="modal-title">
+                AVTOMOBIL MA'LUMOTLARI
+            </p>
+
+            <h2 id="carName">
+                BMW M5
+            </h2>
+
+            <div class="details">
+
+                <div class="detail-box">
+                    <span>🔧</span>
+                    <p>Dvigatel</p>
+                    <strong id="engine"></strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>⚡</span>
+                    <p>Quvvat</p>
+                    <strong id="power"></strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>🚀</span>
+                    <p>Maksimal tezlik</p>
+                    <strong id="speed"></strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>⏱️</span>
+                    <p>0–100 km/soat</p>
+                    <strong id="acceleration"></strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>⛽</span>
+                    <p>Yoqilg‘i</p>
+                    <strong id="fuel"></strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>⚙️</span>
+                    <p>Uzatma</p>
+                    <strong id="gear"></strong>
+                </div>
+
+            </div>
+
+            <div class="modal-price">
+                <span>Narxi</span>
+                <strong id="carPrice"></strong>
+            </div>
+
+            <a href="#contact" class="buy-btn" onclick="closeCar()">
+                Sotib olish
+            </a>
+
+        </div>
+
+    </div>
+
+    <section class="about" id="about">
+
+        <div class="about-text">
+
+            <p class="small-title">
+                BIZ HAQIMIZDA
+            </p>
+
+            <h2>
+                Siz uchun eng yaxshi
+                avtomobillarni tanlaymiz
+            </h2>
+
+            <p>
+                AutoDrive — zamonaviy avtomobillarni sotish
+                va mijozlarga yuqori sifatli xizmat ko‘rsatishga
+                ixtisoslashgan avtosalon.
+            </p>
+
+            <p>
+                Bizda sport avtomobillari, oilaviy avtomobillar,
+                SUV va zamonaviy gibrid avtomobillar mavjud.
+            </p>
+
+            <a href="#contact" class="btn">
+                Biz bilan bog‘lanish
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <div class="section-head">
+
+            <p>ALOQA</p>
+
+            <h2>Biz bilan bog‘laning</h2>
+
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-box">
+                <span>📞</span>
+                <h3>Telefon</h3>
+                <p>+998 90 123 45 67</p>
+            </div>
+
+            <div class="contact-box">
+                <span>📍</span>
+                <h3>Manzil</h3>
+                <p>Toshkent shahri</p>
+            </div>
+
+            <div class="contact-box">
+                <span>📧</span>
+                <h3>Email</h3>
+                <p>autodrive@gmail.com</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="logo">
+            AUTO<span>DRIVE</span>
+        </div>
+
+        <p>
+            © 2026 AutoDrive. Barcha huquqlar himoyalangan.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function showCar(
+            name,
+            engine,
+            power,
+            speed,
+            acceleration,
+            fuel,
+            gear,
+            price
+        ) {
+
+            document.getElementById("carName").innerText = name;
+
+            document.getElementById("engine").innerText = engine;
+
+            document.getElementById("power").innerText = power;
+
+            document.getElementById("speed").innerText = speed;
+
+            document.getElementById("acceleration").innerText = acceleration;
+
+            document.getElementById("fuel").innerText = fuel;
+
+            document.getElementById("gear").innerText = gear;
+
+            document.getElementById("carPrice").innerText = price;
+
+            document.getElementById("carModal").style.display = "flex";
+        }
+
+
+        function closeCar() {
+
+            document.getElementById("carModal").style.display = "none";
+
+        }
+
+        function filterCars(brand) {
+
+            const cars = document.querySelectorAll(".car-card");
+
+            cars.forEach(function(car) {
+
+                if (
+                    brand === "all" ||
+                    car.dataset.brand === brand
+                ) {
+
+                    car.style.display = "block";
+
+                } else {
+
+                    car.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+        window.onclick = function(event) {
+
+            const modal = document.getElementById("carModal");
+
+            if (event.target === modal) {
+
+                closeCar();
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
